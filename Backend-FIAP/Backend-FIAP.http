@@ -1,0 +1,6 @@
+@Backend_FIAP_HostAddress = http://localhost:5096
+
+GET {{Backend_FIAP_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
