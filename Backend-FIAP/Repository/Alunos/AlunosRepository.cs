@@ -21,7 +21,7 @@ namespace Backend_FIAP.Repository.Alunos
 
         public AlunoModel SearchAluno(int id)
         {        
-            return _connection.QuerySingle<AlunoModel>("SELECT * FROM aluno WHERE id = @id", new { id = id});
+            return _connection.QuerySingleOrDefault<AlunoModel>("SELECT * FROM aluno WHERE id = @id", new { id = id});
         }
 
         public bool InsertAluno(AlunoModel alunoModel)

@@ -84,12 +84,12 @@ namespace Backend_FIAP.Controllers
                     });
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 return Ok(new
                 {
                     code = 409,
-                    message = "Um erro ocorreu na geração da resposta, tente novamente!"
+                    message = "Um erro ocorreu na geração da resposta, tente novamente!" + ex
                 });
             }
         }

@@ -57,8 +57,8 @@ namespace Backend_FIAP.Controllers
             try
             {
 
-                TurmaModel turmaModel = _turmas.SearchTurmaNome(turma);
-                if(turmaModel != null)
+                TurmaModel verificacao = _turmas.SearchTurmaNome(turma);
+                if(verificacao != null)
                 {
                     return Ok(new
                     {
@@ -76,7 +76,7 @@ namespace Backend_FIAP.Controllers
                         message = "Informe um ano válido!"
                     });
                 }
-
+                TurmaModel turmaModel = new TurmaModel();
                 turmaModel.curso = curso;
                 turmaModel.turma = turma;
                 turmaModel.ano = ano;

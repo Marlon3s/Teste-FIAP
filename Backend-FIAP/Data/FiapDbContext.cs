@@ -15,7 +15,7 @@ namespace Backend_FIAP.Data
         public DbSet<Aluno_TurmaModel> aluno_turma { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Aluno_TurmaModel>().HasKey(x => new {x.aluno_id, x.turma_id});
+            modelBuilder.Entity<Aluno_TurmaModel>().HasNoKey();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

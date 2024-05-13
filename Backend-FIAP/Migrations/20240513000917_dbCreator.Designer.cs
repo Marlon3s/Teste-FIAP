@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend_FIAP.Migrations
 {
     [DbContext(typeof(FiapDbContext))]
-    [Migration("20240512143034_dbCreate")]
-    partial class dbCreate
+    [Migration("20240513000917_dbCreator")]
+    partial class dbCreator
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,19 +57,17 @@ namespace Backend_FIAP.Migrations
                     b.Property<int>("aluno_id")
                         .HasColumnType("int");
 
-                    b.Property<int>("turma_id")
-                        .HasColumnType("int");
-
                     b.Property<int>("alunoid")
                         .HasColumnType("int");
 
                     b.Property<int>("status")
                         .HasColumnType("int");
 
-                    b.Property<int>("turmaid")
+                    b.Property<int>("turma_id")
                         .HasColumnType("int");
 
-                    b.HasKey("aluno_id", "turma_id");
+                    b.Property<int>("turmaid")
+                        .HasColumnType("int");
 
                     b.HasIndex("alunoid");
 

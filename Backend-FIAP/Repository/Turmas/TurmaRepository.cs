@@ -57,7 +57,7 @@ namespace Backend_FIAP.Repository.Turmas
 
         public TurmaModel SearchTurmaNome(string turma)
         {         
-            return _connection.QuerySingle<TurmaModel>("SELECT * FROM turma WHERE turma = @turma", new { turma = turma });        
+            return _connection.QuerySingleOrDefault<TurmaModel>("SELECT * FROM turma WHERE turma = @turma", new { turma = turma });        
         }
 
         public bool UpdateTurma(TurmaModel turmaModel)

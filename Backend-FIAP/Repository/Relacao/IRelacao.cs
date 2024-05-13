@@ -4,9 +4,8 @@ namespace Backend_FIAP.Repository.Relacao
 {
     public interface IRelacao
     {
-        Aluno_TurmaModel SearchRelacao(int idAluno, int idTurma);
-        bool InsertRelacao(int idAluno, int idTurma);
-        bool DeleteRelacao(int idAluno, int idTurma);
+        Aluno_TurmaModel SearchRelacao(int aluno_id, int turma_id);
+        bool InsertRelacao(int aluno_id, int turma_id);
         List<Aluno_TurmaModel> ListRelacoes();
     }
 }

@@ -54,13 +54,11 @@ namespace Backend_FIAP.Migrations
                     b.Property<int>("aluno_id")
                         .HasColumnType("int");
 
-                    b.Property<int>("turma_id")
-                        .HasColumnType("int");
-
                     b.Property<int>("status")
                         .HasColumnType("int");
 
-                    b.HasKey("aluno_id", "turma_id");
+                    b.Property<int>("turma_id")
+                        .HasColumnType("int");
 
                     b.HasIndex("aluno_id");
 

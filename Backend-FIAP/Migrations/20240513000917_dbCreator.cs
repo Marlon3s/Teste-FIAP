@@ -5,7 +5,7 @@
 namespace Backend_FIAP.Migrations
 {
     /// <inheritdoc />
-    public partial class dbCreate : Migration
+    public partial class dbCreator : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -47,12 +47,11 @@ namespace Backend_FIAP.Migrations
                 columns: table => new
                 {
                     aluno_id = table.Column<int>(type: "int", nullable: false),
-                    turma_id = table.Column<int>(type: "int", nullable: false),                  
+                    turma_id = table.Column<int>(type: "int", nullable: false),
                     status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_aluno_turma", x => new { x.aluno_id, x.turma_id });
                     table.ForeignKey(
                         name: "FK_aluno_turma_aluno_alunoid",
                         column: x => x.aluno_id,
